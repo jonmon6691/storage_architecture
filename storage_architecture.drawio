@@ -1,1 +1,267 @@
-<mxfile host="app.diagrams.net" modified="2020-11-14T19:26:23.693Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="o2fRD9Hqx6sr4tdUxaAf" version="13.9.8" type="device" pages="5"><diagram id="nJ3RZQYG2YScG-p-Dwe9" name="Overview">3VjJcuM2EP0aVSUHqbiIlHy0JS9JHM9U7GSWG0RCJMYgwQEhS/LXp7Fxl63MWJNKdFABD3u/h+4GR/4i211zVKS/sxjTkefEu5G/HHne2XwO/xLYayCcTjWQcBJryK2Be/KMDegYdENiXGrMQIIxKkhRtkZHLM9xJFoY4pxt293WjLZXLVCCe8B9hGgf/UBikWp0Fjo1foNJkpqVp3PTkCHb1wBlimK2bUD+5chfcMaELmW7BabSdNYsetzVgdZqXxzn4pgB4+ub/V128+m3919nTx+Qv53xP8duqKd5QnRjDmx2K/bWArDxQhZjJFApGIfyxTYlAt8XKJINWyAesFRkFGouFJ8wFwRseE5JkgMmmOrAOHlmuUC2GzLNERwBcwDMZmA03h08plsZDzSHWYYF30MXMyAIjL2N3lwrpG3NnjszWNpgznMMiIxikmru2qpQMIb9J0b+v9l42jZxcKSF/empLDwdsHBIYdmLFRQSWfh8dS9dB8ofYQVwFkKe1XQCpOpXDeQWiVhWcFyWhEk75qzfA+cR3xei7tBhl7NNHmN5AOd1Xt/iDrT58WYDBAUDBIWn4md+BD/v3727rRjqWniIKX8H3b0HwJyb5bI/hiMSP7vfR0bv9qwJpQtGGVdM5/KeloKzR9wB34DFsM1iOECi/yNJdIf8WIfFa8YSMLTnLDl5wsfxyCMqbQahHlY/l3v8z1IWzDrBx/F/HGl5kYSz86vrX5dfyPKu/Cv/47M/GHs0BalrCbiHgCOzIM8555E0biQ2HDeoqrtasLDAQ0pKRZadArWmgDToEcsOSKaApBQkj5Sf9JwVFluMczsEdii7QPwbeQsJ5rHO6qSjnkBxYX22o1YsNitKIiqNj54QoWildJfhmKBqeMnWYovURkSK5NgI6bXhj+OCgojiiT14cwtmEcxLlktYbqkATSOBW/tT0+VM1JNGDCSEZSNZwx9lpdx+ZcuiNmVH5SA70ZbyoEyH5AyXgeQJAEFde5D5wHLsHboycptrqjLSlMQxMAFXsXXR1mBxk5C7p0olul7O73s5byhUud6pbox3fLa2pnh3Lt8YKgeITXEZUQTZQtTmsmtMvCPio2mT5U/S6JPA1JY7w4Gq7G0lj+0bxPMnfusX6nazhDedzM/csPrNpAjM0NDpqGjk+Wv1qyjFce9R1CFU3q0Nj/AL8cIfJr7B7BCxFuOYIiFjSOtBN0C2WeE9I8o57Dq5ps2B5h296O2bUc1nU2eioDtRV3gC8QSL3kRKe9Wxv12Ofk+Ov0C2iTOscnzwOih63BTKB2vvmIHQUrrviVZyeotW8Dp/OVx23xUZOAc5xwXkwORZuVmtxkIeWRkhuBgFy47GQ1s3O7CBqO8szMvdzDyqDNzU3OGbetCzjJ2Je3bW4m7+JtKCu+XOhua1U7D1usQnEUM4yKo1MeMiZYmMV5c12vHpdZ9bpgKE1MAXLMTeEIc2grUVAiTw/cdmpeGrZLV2VqpmvVVXDQ0PuaIsetTQFaF1uEO8GuG1/JmqfptvGjRkoPvpu/uCD5sOS+xoBX1XJApez7fvWNMFHJNtW0yy05JS+HXDbMO4VGaHZNxx/WJXN9pZfoJMTh2g4EwmeyrfWSnTqFfXz42l9UpvnvQc77iGsp/DmY6UKpMplJBCVunTCfKcKh699iY/2TeTfmB5+ZuJztLxkTJrfzShz9NXvpogXI69IBwnUdbTyL/8+cQ9O93nE6jWX4B1lKi/ovuXfwM=</diagram><diagram name="Internal Arch" id="vzJnrldd0c1qB9JZdmv3">5VptU+M2EP41mX4K45ckhI9HAkc7R7lO6FzbL4xiK7aKLKWyQgi/vqs3x46VEO5IKJQZiLJerbTPs1qtZDrxqHj8LNA8v+Yppp0oSB878bgTRcNwCH+VYGUE/Tg2gkyQ1IjCtWBCnrAVBla6ICkujcyKJOdUknnZ6J1wxnAiGzIkBF821WacNkedowy3BJME0bb0G0llbqSng2Atv8Iky+3IvaF9UCCnawVljlK+rInii048EpxL0yoeR5gq6BwsV/Pf5ODi7+6vf+STezS6Sy7zsGuMXb6kS+WBwEy+runImH5AdGHhsr7KlcMP3J6rZookKiUX0D5f5kTiyRwl6sESwgZkuSwofAuh+YCFJMDAJ0oyBjLJtQIX5IkziZwaso8TcAsLENjJQG/8uEHeM66HFR8QxpgXWIoV9LNW+n1LoQ3hnv26XMdDeGpleT0WAitENgazyvQaaGhYrF+Ae/y/wL33X4N94IF9QGHY8yk0MtX463KiMhRi9zACEklOHiB7OS3h1JwElKquCS/mApcl4Qpd+tRrd8MsEau5NBoIl92oP+hmSdFiX/AFS7HyJXie94OtmyZ/4ZmHwL6HwMGh+Dt9IX+wp0gFgIcsH6U/wgGHJ0QqpCKlDUzIm6boSCzFgz1Zig/F0nAPlr7e3HypeNpnccWPoB7dgiy4Go/bfQQi6VP4Yxy2EuOMUDrilEN7zDhTKbiUgt/jDeGhqB00qfUxGx9z/bmabhe1nV4ARIV310HoX3fvINNV399sDYW+ysyLdHB3HUbvF+nhmyPtq8U2kP7MeQYoRsFYQDmwX8ISCVXJAQ5AMPonNcePlZv6p00mfUvmuMmp1yLSLI/g9G6KSnzyNCtbHFRVNk8WhYbjOSKmhrUvUyfwENEiqzTH4uAk6h+RkuoM/hwnvYNx0n9BGrM8vdtcFvvgPm4uax9wLLRDFf1ka/hL/fEcji+L9GMG+r7J53CB3j6a2Cro7GMj7zsTHhf59nHjT/i56/RH19fXHxr8uH/61uCftcA/OTlp4a1Ow01MvaXKPkBv3nEVJE3pNhKbu8SMM2nvpw96IB+4NOxoittrpOdhKToUS86wZxfOQ7fF/qwAZkgZ+6SuvSRO5ELUd+O1rhPOneCGUQWAzFXBS1Ep4WOGlwpLLAhPSaICgqF5mXNZKh+V5UBgiQgDgqATB1KVkZECKscCo1JrFFxiHU1cqJt+/aJA9dJW4NeUDAHEjvpATBlDGhMztAKHJWAHKFV9Mk5YpjpwsUQiPak5ON/q3612DCoVO5pzRRlXRsE+ktoPmDqrkPDMXqvPiNAQEUYkgRB/0l3N3LUC06YlXyS5eZSBx3vN9ALieVVzfmRh2j5jCxmrA+W0StOWfKtLgF9g0OE0xdorD+XOntIQfIUNK2rYJOEiRSzBen3A8nADgUP/LNS7lXMdGhvxs44cp2XWLYIVg4UfqVdLSqW62IMgisf99bdbddk+7kbb6lEOxMyofoGUQ86CKNmRn8Kj3tNv3jN58lXkq2Oj17iolyUe/l7kEf0mfilm+Gw1WcnuznumGomOfAVd1+zBcNQOwmj+WI+M5lpRyt9v5asLslJr7bgKMONsvyFwsgXdlFDSuqZ2gi+7FsN6Qs1xgjHHJfvJpJyELlJcLbNWQlMJA1pLZniFKtatVZmbNUxQBhDURmpPV0n2ADjcRVM1/8k6idisttXPSX3iEPRBASPm2xwYNTMUA15L4/2Cqgw11dtNzkud0kubBFfV9mWyNCqmJFvwhd5cyEMt/UNXohMbn9Uy8g7YQFgPhlevoiieSU8NZd4TPl9AUTTF9Bwl95mWu0E6UXypfzw5bP1apH/IkmvzVaPvXWN11VhPYeF3FF3wdf3WXz+r/edEfPEv</diagram><diagram name="Initialize" id="cofP7T9EM-FGZ8RabKio">5VlbU9s4FP41eUzG98AjEGi3C00pdNrtS0axFVuLLXlkhVx+/R7J8t25sENgu4WBSMfSsXS+T5+OlIF9law/cJRGdyzA8cAygvXAngws68w8g//SsMkNrm3nhpCTIDeZleGBbLE2Gtq6JAHOcps2CcZiQdKs0dtnlGJfNGyIc7ZqNluwuPnWFIW4Y3jwUdy1fieBiHLr2DMq+0dMwki/2TnTDxJUtNWGLEIBW9VM9vXAvuKMibyUrK9wLENXhMX4zg36+Wx6z437ybfp8tv05s9h7uzmJV3KGXBMxeu6tnLXzyhe6nDpuYpNET+YdiqLARIoE4xD+XIVEYEfUuTLByugDdgikcRQM6H4jLkggMBFTEIKNsFUA8bJllGBimZIP/ZhWpiDQQ8GeuN1C7wDUzdLPIDGmCVY8A30015cV0OoKezo6qrigznWtqjOBUMbkeZgWLquAg0FHesXxN3+LeLuvGPYLXQ3p/z2wl18Ztuv5NPsOrgqVlItyjgAsdBVxkXEQkZRfF1ZLzlb0gBLrwbUqja3TEZXBfRvLMRGKx9aCtZEBa+J+FEr/yVdjcaurk7W2rWqbIoKhfn+qFfybpZb1Kt+qlZ0zATiQo/FtNTj4ELKKNTnMfOfctMNicvx0aDefgFPrljMuAqQvVA/0g4UKtp5JWlk/P4FZQADtuQ+3tdOrxGYT4j3OrT6SchxjAR5bg6vj1KqK8QIbWoNUkaoyGqev0hDTVPsJrmtsd2U30PtLaNF53wEFbnLqRzF99mGTz/h9H7mJemD+Pl1hZ9mPTKzXWQy+IA5fAy/rlSA6RN4R9yPIFrZwDEs+J3dGePZHGUYWgxceL0XAwiXcw6lUCj8PZRIfdG1Zq+RelHPYrtFc8gvGguko0dtHUtIEORrEWdki+bKnyS7Bgmcu5cDd9JiqbVP2nS6oZ1Vu3ydv7s1ZKfkDY2RbY3PGlAXlH8ZITsMssejc7vh2PRGznnTDVssMlgtbaF8BS79h7TTOlI7zd9VO51jpdN+D+m0WumYZbh7pbPT3h2fXjq7mbGWTorSLGLiGOH8xeVvtwzskz/PMc+bcL2K+pmuNXLM1pZ7Au3bt54a6breD4vt8OfNQw8l+nbNOP+8Kbv6LEkB2owwiXa8dbrdMPX5JhV5C4SzoeV6w9BPOhxrKu6B88Kp8v7WejXPexJ/tyfx90513PKOwO/LdHpbIngMbPZaJj2PMvX5OJl0+3BEgm1313wRQh1tqO8wlFGsdi3OnnDLeCpovSa0Xg+y9lsia5qHof3AWBjLPHbCpf4cBS73YxlIywjh7RdyjP8vHN1xE0j33YHsbriHDxTlHQnzl4kKxyEg5jlqt/PC0ANEB6ws31F1BvlWkJQ3qIcwcU6GSd81VWtxdbOe7mL6JXap3iXQt0vZp7qdMnZGOzKLUP5BiSBA0C1SyUAV7KpJYUwLw2MkhUzdI8r0yCDtPJbJM75j6NM+UncDCP4WSzVofVuguuE19pcCB2W7DNPSB8cJE1hBzbi8lq+Gl+4cXXmPQOdZ2lTjdCeBgAqiyZJe9exTWeAZoSEY3Kr2qI6jQ2sXGxmwbxGrc2AEyTimnbNtPfF+0zvW9o5sd1ls9bHYtF5OY6hWX3fkuXX1lZF9/Q8=</diagram><diagram name="Incremental Backup" id="_9e9zvw17JblkfMjJDrS">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</diagram><diagram id="UWOGQSKJGF1zsfyRiutg" name="FAQ">rZTBbtswDIafxscBjp2lvTZJ02xATgFWYDfFpi0hsujJTJPs6Ufash03h25Yc3CoTxR/iRIZpavq8uJVrXeYg42SOL9E6TpKksXDI38FXDswnycdKL3JOzQbwd78hgDjQE8mh2biSIiWTD2FGToHGU2Y8h7PU7cC7VS1ViXcgX2m7D19NTnpjj4s4pFvwZQ6KM8fw0Slet8AGq1yPN+g9DlKVx6ROqu6rMBK6vq0HL792P48Pu3q/c7Xzv56+b5cfemCbf5lyXACD44+N3S4yjdlTyFdUbKwLLI88dpFKVZPrOnJq1bEq7Sqa3CNaBRyWU4sl3moZJ9JjAJ4hATyDhDEtTJNY1wZpZs+Lm95DH0vtuWcc1xZSxpaCQJ+anQViWLAB9XI3xt4UxjIJWFsYm74Kdjr5+sNB/tvxXWXmckxGqfqRqOk0UEbm1BmO2VSxrXQ4l9pMby9z/Y107WvEIKLcE2VZTBjsyGPR1ihRc/EoWPPZWGsfYeUNaXjoYVCInAmSA7/FDBhzfSsDcG+VpnInbnHMPN4cjnIy4wlFeoAdqmyY9nyXiRK0k37E3F0FHrLTHaIHE+uJF1/jYcziT5c3pX9B0UzGyqZGyBgBeTlokOUoYuF5jebh/F5bCXz3kfftJHBUYX2VQ6xxxplI5RpPxy7STt305HT5z8=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-14T20:33:05.214Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="2Kh7xRfhNobWyYN5sKCh" compressed="false" version="13.9.8" type="device" pages="5">
+  <diagram id="nJ3RZQYG2YScG-p-Dwe9" name="Overview">
+    <mxGraphModel dx="988" dy="644" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-GHyNmHYKPq7vWa3w7rU-16" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="550" y="110" width="170" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-GHyNmHYKPq7vWa3w7rU-1" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="170" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="-GHyNmHYKPq7vWa3w7rU-4" value="&lt;b&gt;ZFS tank/content&lt;/b&gt;&lt;br&gt;compression=no&lt;br&gt;encryption=no" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="270" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-GHyNmHYKPq7vWa3w7rU-8" value="&lt;b&gt;ZPOOL tank&lt;br&gt;&lt;/b&gt;3x 2TB HDD&lt;br&gt;raidz1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-GHyNmHYKPq7vWa3w7rU-11" value="&lt;b&gt;Google Drive&lt;br&gt;&lt;/b&gt;rclone gd:/" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="103" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="npg67AFGJDjiDNsVnRZ3-1" value="&lt;h1&gt;Storage Architecture&lt;/h1&gt;&lt;p&gt;This storage architecture makes a distinction between archival data, and content. Content is publicly available media and software that can be replaced. Archival data is personal, private, and can not be recovered if lost.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="260" y="30" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="npg67AFGJDjiDNsVnRZ3-2" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endWidth=23.333333333333336;endSize=24.89166666666667;width=60;fillColor=#ffffff;" edge="1" parent="1" source="-GHyNmHYKPq7vWa3w7rU-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="280" as="sourcePoint" />
+            <mxPoint x="540" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="npg67AFGJDjiDNsVnRZ3-3" value="Incremental backups sent periodically" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontStyle=1" vertex="1" connectable="0" parent="npg67AFGJDjiDNsVnRZ3-2">
+          <mxGeometry x="-0.199" y="8" relative="1" as="geometry">
+            <mxPoint x="24.17" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="npg67AFGJDjiDNsVnRZ3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;endArrow=block;endFill=1;startSize=12;endSize=12;" edge="1" parent="1" source="npg67AFGJDjiDNsVnRZ3-5" target="-GHyNmHYKPq7vWa3w7rU-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="npg67AFGJDjiDNsVnRZ3-5" value="&lt;b&gt;No backups&lt;br&gt;&lt;/b&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;(still protected by raidz1)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;opacity=20;" vertex="1" parent="1">
+          <mxGeometry x="260" y="280" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-GHyNmHYKPq7vWa3w7rU-3" value="&lt;b&gt;ZFS tank/archives&lt;br&gt;&lt;/b&gt;compression=lz4&lt;br&gt;encryption=aes-256-gcm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="190" width="150" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Internal Arch" id="vzJnrldd0c1qB9JZdmv3">
+    <mxGraphModel dx="818" dy="533" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-0" />
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-1" parent="HpQt6Ej-NXhSkaC_cFh1-0" />
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-2" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="550" y="40" width="170" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-3" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="40" y="40" width="170" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-6" value="&lt;b&gt;ZFS tank/archives&lt;br&gt;&lt;/b&gt;compression=lz4&lt;br&gt;encryption=aes-256-gcm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="50" y="190" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-7" value="&lt;b&gt;ZFS tank/content&lt;/b&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;opacity=20;textOpacity=20;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="50" y="360" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-8" value="&lt;b&gt;ZPOOL tank&lt;br&gt;&lt;/b&gt;3x 2TB HDD&lt;br&gt;raidz1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="60" y="60" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-10" value="&lt;b&gt;@2021_M01&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="50" y="250" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-12" value="&lt;b&gt;@2020_M12&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="50" y="280" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-13" value="&lt;b&gt;Google Drive&lt;br&gt;&lt;/b&gt;rclone gd:/" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="570" y="50" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-14" value="2020_M07_base.zfs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=none;align=center;size=0.25;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="570" y="210" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-15" value="&lt;b&gt;@2020_M07_base&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="50" y="310" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-16" value="2020_M08.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="570" y="250" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-17" value="2021_M09.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="570" y="290" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-18" value="%Y_M%m.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="570" y="357" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-19" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="616" y="330" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-20" value="&lt;h1&gt;Internal Architecture&lt;/h1&gt;&lt;p&gt;Only the last few periodic snapshots are retained locally, whereas remote storage contains a base file and all period increments going forward.&lt;/p&gt;&lt;p&gt;The @base snapshot is created when the remote storage is first initialized and is not touched again&lt;/p&gt;&lt;p&gt;Every period, a snapshot is created and an increment is sent to the remote storage. The oldest periodic snapshot is destroyed in accordance with the &quot;local snapshots retained&quot; parameter&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;align=center;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="260" y="30" width="250" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tse8Umh2lWrJmfe9ySyt-0" value="&lt;b style=&quot;font-size: 12px&quot;&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;Parameters:&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Local snapshots retained:&lt;/b&gt; Doesn&#39;t include the base snapshot, shown as 2 in this diagram&lt;/li&gt;&lt;li style=&quot;font-size: 11px&quot;&gt;&lt;b&gt;Snapshot period:&lt;/b&gt; Shown as 1 month in this diagram, snapshot names should be chosen so they are not ambiguous given the choice of period&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=11;opacity=50;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="240" y="240" width="280" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Initialize" id="cofP7T9EM-FGZ8RabKio">
+    <mxGraphModel dx="818" dy="533" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-0" />
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-1" parent="0Wr0nN8OQr0QDUOuUOFK-0" />
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-2" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+          <mxGeometry x="550" y="40" width="170" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-3" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+          <mxGeometry x="40" y="40" width="170" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="2aMbnrLA5fNozRiJ_EdC-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=16;" edge="1" parent="0Wr0nN8OQr0QDUOuUOFK-1" source="0Wr0nN8OQr0QDUOuUOFK-13" target="0Wr0nN8OQr0QDUOuUOFK-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="273" />
+              <mxPoint x="530" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yrOJepQ_6mpStZRwek_-3" value="zfs send -Rw tank/archives@2020_M07_base \&lt;br&gt;&amp;gt; 2020_M07_base.zfs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="2aMbnrLA5fNozRiJ_EdC-1">
+          <mxGeometry x="-0.3278" y="-1" relative="1" as="geometry">
+            <mxPoint x="37.93" y="16.49" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yrOJepQ_6mpStZRwek_-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=16;" edge="1" parent="0Wr0nN8OQr0QDUOuUOFK-1" source="0Wr0nN8OQr0QDUOuUOFK-4" target="0Wr0nN8OQr0QDUOuUOFK-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="205" />
+              <mxPoint x="250" y="257" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yrOJepQ_6mpStZRwek_-2" value="zfs snapshot tank/archives@2020_M07_base" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_yrOJepQ_6mpStZRwek_-1">
+          <mxGeometry x="-0.6419" y="2" relative="1" as="geometry">
+            <mxPoint x="152.41" y="27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-4" value="&lt;b&gt;ZFS tank/archives&lt;br&gt;&lt;/b&gt;compression=lz4&lt;br&gt;encryption=aes-256-gcm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+          <mxGeometry x="50" y="190" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-6" value="&lt;b&gt;ZPOOL tank&lt;br&gt;&lt;/b&gt;3x 2TB HDD&lt;br&gt;raidz1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+          <mxGeometry x="60" y="60" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-11" value="&lt;b&gt;Google Drive&lt;br&gt;&lt;/b&gt;rclone gd:/" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+          <mxGeometry x="570" y="50" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-12" value="2020_M07_base.zfs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=none;align=center;size=0.25;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+          <mxGeometry x="570" y="210" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-13" value="&lt;b&gt;@2020_M07_base&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+          <mxGeometry x="50" y="250" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2aMbnrLA5fNozRiJ_EdC-0" value="&lt;h1&gt;Initialization&lt;/h1&gt;&lt;p&gt;The dataset is snapshot to @base and a full send is executed and sent to remote storage&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;align=center;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+          <mxGeometry x="260" y="30" width="250" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Incremental Backup" id="_9e9zvw17JblkfMjJDrS">
+    <mxGraphModel dx="818" dy="533" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-0" />
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-1" parent="Dsu6ImqsWFirkIyhKRx3-0" />
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-2" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="550" y="40" width="170" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-3" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="40" y="40" width="170" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=12;" edge="1" parent="Dsu6ImqsWFirkIyhKRx3-1" source="Dsu6ImqsWFirkIyhKRx3-6" target="BSZRfIyCe6NDJ4Em-f5b-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="220" />
+              <mxPoint x="250" y="257" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-8" value="zfs snapshot tank/archives@2021_M01" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="BSZRfIyCe6NDJ4Em-f5b-1">
+          <mxGeometry x="-0.213" y="2" relative="1" as="geometry">
+            <mxPoint x="138" y="-8.66" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-6" value="&lt;b&gt;ZFS tank/archives&lt;br&gt;&lt;/b&gt;compression=lz4&lt;br&gt;encryption=aes-256-gcm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="50" y="190" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-8" value="&lt;b&gt;ZPOOL tank&lt;br&gt;&lt;/b&gt;3x 2TB HDD&lt;br&gt;raidz1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="60" y="60" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-10" value="&lt;b&gt;@2020_M11&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="50" y="310" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;startSize=12;endArrow=none;endFill=0;endSize=12;fillColor=#ffffff;fontSize=12;" edge="1" parent="Dsu6ImqsWFirkIyhKRx3-1" source="Dsu6ImqsWFirkIyhKRx3-12" target="BSZRfIyCe6NDJ4Em-f5b-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-12" value="&lt;b&gt;@2020_M12&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="50" y="280" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-13" value="&lt;b&gt;Google Drive&lt;br&gt;&lt;/b&gt;rclone gd:/" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="570" y="50" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-14" value="2020_M07_base.zfs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=none;align=center;size=0.25;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="570" y="210" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-15" value="&lt;b&gt;@2020_M07_base&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="50" y="340" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-16" value="2020_M12.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="570" y="270" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-17" value="2021_M01.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="570" y="310" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-20" value="&lt;h1&gt;Incremental Backup&lt;/h1&gt;&lt;p&gt;Every period, a new dataset snapshot is created and then the increment between this and the previous snapshot is sent to remote storage. Finally any snapshots past the set number of local snapshots are destroyed (except for the base)&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;align=center;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="260" y="30" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startSize=12;endArrow=none;endFill=0;endSize=12;fillColor=#ffffff;fontSize=12;" edge="1" parent="Dsu6ImqsWFirkIyhKRx3-1" source="BSZRfIyCe6NDJ4Em-f5b-0" target="BSZRfIyCe6NDJ4Em-f5b-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-0" value="&lt;b&gt;@2021_M01&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="50" y="250" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=12;" edge="1" parent="Dsu6ImqsWFirkIyhKRx3-1" source="BSZRfIyCe6NDJ4Em-f5b-3" target="Dsu6ImqsWFirkIyhKRx3-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="284" />
+              <mxPoint x="540" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-7" value="zfs send -wi tank/archives@2020_M12 \&lt;br&gt;tank/archives@2021_M01 &amp;gt; 2021_M01.zfsi" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="BSZRfIyCe6NDJ4Em-f5b-6">
+          <mxGeometry x="-0.7711" y="2" relative="1" as="geometry">
+            <mxPoint x="1.0300000000000011" y="48.010000000000005" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-3" value="" style="triangle;whiteSpace=wrap;html=1;fillColor=none;fontSize=12;align=center;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="300" y="262" width="60" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-11" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.x;labelBackgroundColor=#FFFFFF;fontSize=12;align=center;fillColor=#f8cecc;strokeColor=#b85450;opacity=50;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="50" y="310" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=11;" edge="1" parent="Dsu6ImqsWFirkIyhKRx3-1" source="BSZRfIyCe6NDJ4Em-f5b-12" target="Dsu6ImqsWFirkIyhKRx3-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-12" value="zfs destroy tank/archives@2020_M11" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=11;opacity=50;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="280" y="380" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_eyJa2z6mlq-MGPUq4mG-0" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=15;opacity=50;fontStyle=1" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="618" y="244" width="40" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="UWOGQSKJGF1zsfyRiutg" name="FAQ">
+    <mxGraphModel dx="678" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="bIVHZkAMpSMrpnlqGJBC-0" />
+        <mxCell id="bIVHZkAMpSMrpnlqGJBC-1" parent="bIVHZkAMpSMrpnlqGJBC-0" />
+        <mxCell id="bIVHZkAMpSMrpnlqGJBC-2" value="&lt;ul&gt;&lt;li&gt;What happens if an increment on remote goes missing?&lt;/li&gt;&lt;li&gt;How is the integrity of the base verified periodically?&lt;/li&gt;&lt;li&gt;How is the integrity of the remote verified periodically?&lt;/li&gt;&lt;li&gt;Does the base snapshot need to be retained locally?&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=11;opacity=50;" vertex="1" parent="bIVHZkAMpSMrpnlqGJBC-1">
+          <mxGeometry x="210" y="140" width="410" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
