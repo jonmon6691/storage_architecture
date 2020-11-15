@@ -20,7 +20,7 @@ files=$(tempfile)
 ls -1 $remote_dir > $files
 
 # get latest_stamp
-latest_stamp=$(zfs list -s creation -o creation,tag:offsite,name -pHt snapshot tank/archives | awk '$2 == "offsite"' | tail -n1)
+latest_stamp=$(zfs list -s creation -o creation,tag:offsite,name -pHt snapshot $dataset | awk '$2 == "offsite"' | tail -n1)
 latest_stamp_name=$(echo "$latest_stamp" | awk '{print $3}')
 echo "Latest local snapshot that was verified as sent offsite: $latest_stamp_name"
 
