@@ -20,6 +20,11 @@ base_name=${dataset}@${stamp}_base
 # Verify remote
 
 # Create base_file
-base_file=${stamp}_base.zfs
-(set -x; zfs send --raw --replicate ${base_name} > ${remote}/${base_file}) || exit
+base_path=${remote}/base_${stamp}.zfs
+(set -x; zfs send --raw --replicate ${base_name} > ${base_path}) || exit
 
+# Verify increment on remote, tag snapshot if all is well
+if [[ -f ${base_path} && `stat -c %s ${base_path}` -gt 0 ]]
+then
+	(set -x; zfs set tag:offsite=offsite ${base_name})
+fi
