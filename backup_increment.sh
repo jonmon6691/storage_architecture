@@ -17,7 +17,7 @@ else
 	exit
 fi
 
-prev_snapshot=`zfs list -s creation -o name,tag:offsite -pH -t snapshot tank/archives | awk '$2 == "offsite" {print $1}' | tail -n 1`
+prev_snapshot=`zfs list -s creation -o name,tag:offsite -pH -t snapshot $dataset | awk '$2 == "offsite" {print $1}' | tail -n 1`
 prev_stamp=`zfs list -o creation -pH -t snapshot ${prev_snapshot}`
 
 # Create snapshot
