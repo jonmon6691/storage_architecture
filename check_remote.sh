@@ -1,15 +1,22 @@
 #!/bin/bash 
 
-if [[ $# -lt 2 ]]
+dataset=""
+remote_dir=""
+
+if [[ -f "backup_args.bash" ]]
 then
+	. backup_args.bash
+elif [[ $# -ge 2 ]]
+then
+	dataset=$1
+	remote_dir=$2
+else
 	echo "usage: ./check_remote.sh <dataset_source> <remote_dir>"
 	echo "	example: ./check_remote.sh tank/archives ~/rclone/gdrive"
 	exit
 fi
 
-dataset=$1
-remote_dir=$2
-files=".check_remote.cache"
+files=$(tempfile)
 
 # find base, get i_stamp
 ls -1 $remote_dir > $files

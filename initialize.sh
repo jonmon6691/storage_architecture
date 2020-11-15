@@ -1,12 +1,22 @@
 #!/bin/bash
 
 dataset=$1
-remote=$2
+remote_dir=$2
 
 if [[ $# -lt 2 ]]
 then
 	echo "Usage: ./initialize.sh <dataset_source> <remote_directory>" 
 	echo "	Example: ./initialize.sh tank/archives ~/rclone/gdrive/"
+	exit
+fi
+
+# Check no base on remote already
+files=".check_remote.cache"
+ls -1 $remote_dir > $files
+base=$(grep "_base.zfs" $files)
+if [[ $base != "" ]]
+then
+	echo "Error: remote already contains a base!"
 	exit
 fi
 
@@ -20,7 +30,7 @@ base_name=${dataset}@${stamp}_base
 # Verify remote
 
 # Create base_file
-base_path=${remote}/base_${stamp}.zfs
+base_path=${remote_dir}/base_${stamp}.zfs
 (set -x; zfs send --raw --replicate ${base_name} > ${base_path}) || exit
 
 # Verify increment on remote, tag snapshot if all is well
@@ -28,3 +38,6 @@ if [[ -f ${base_path} && `stat -c %s ${base_path}` -gt 0 ]]
 then
 	(set -x; zfs set tag:offsite=offsite ${base_name})
 fi
+
+echo "dataset=$dataset" > backup_args.bash
+echo "remote_dir=$remote_dir" >> backup_args.bash
