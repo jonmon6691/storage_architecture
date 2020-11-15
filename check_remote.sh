@@ -17,11 +17,7 @@ else
 fi
 
 files=$(tempfile)
-
-# find base, get i_stamp
 ls -1 $remote_dir > $files
-base=$(grep "_base.zfs" $files)
-nbases=$(echo "$base" | wc -l)
 
 # get latest_stamp
 latest_stamp=$(zfs list -s creation -o creation,tag:offsite,name -pHt snapshot tank/archives | awk '$2 == "offsite"' | tail -n1)
