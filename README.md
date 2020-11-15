@@ -2,6 +2,7 @@
 Documentation and scripts for my storage and backup system
 
 This storage architecture makes a distinction between archival data, and content. Content is publicly available media and software that can be replaced. Archival data is personal, private, and can not be recovered if lost.
+
 ![Overview diagram](docs/overview.svg)
 
 # Internal Architecture
