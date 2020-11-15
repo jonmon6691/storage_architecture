@@ -1,31 +1,28 @@
-<mxfile host="app.diagrams.net" modified="2020-11-14T20:33:05.214Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="2Kh7xRfhNobWyYN5sKCh" compressed="false" version="13.9.8" type="device" pages="5">
+<mxfile host="app.diagrams.net" modified="2020-11-15T01:13:55.364Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="xzxWF77Lwfur85yNlZaa" compressed="false" version="13.9.8" type="device" pages="5">
   <diagram id="nJ3RZQYG2YScG-p-Dwe9" name="Overview">
-    <mxGraphModel dx="988" dy="644" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
+    <mxGraphModel dx="988" dy="597" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="420" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="-GHyNmHYKPq7vWa3w7rU-16" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="550" y="110" width="170" height="200" as="geometry" />
+          <mxGeometry x="550" y="100" width="170" height="200" as="geometry" />
         </mxCell>
         <mxCell id="-GHyNmHYKPq7vWa3w7rU-1" value="" style="shape=datastore;whiteSpace=wrap;html=1;verticalAlign=top;horizontal=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="40" y="50" width="170" height="340" as="geometry" />
+          <mxGeometry x="40" y="40" width="170" height="340" as="geometry" />
         </mxCell>
         <mxCell id="-GHyNmHYKPq7vWa3w7rU-4" value="&lt;b&gt;ZFS tank/content&lt;/b&gt;&lt;br&gt;compression=no&lt;br&gt;encryption=no" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="270" width="150" height="60" as="geometry" />
+          <mxGeometry x="50" y="260" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-GHyNmHYKPq7vWa3w7rU-8" value="&lt;b&gt;ZPOOL tank&lt;br&gt;&lt;/b&gt;3x 2TB HDD&lt;br&gt;raidz1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="60" y="60" width="130" height="60" as="geometry" />
+          <mxGeometry x="60" y="50" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-GHyNmHYKPq7vWa3w7rU-11" value="&lt;b&gt;Google Drive&lt;br&gt;&lt;/b&gt;rclone gd:/" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="570" y="103" width="130" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="npg67AFGJDjiDNsVnRZ3-1" value="&lt;h1&gt;Storage Architecture&lt;/h1&gt;&lt;p&gt;This storage architecture makes a distinction between archival data, and content. Content is publicly available media and software that can be replaced. Archival data is personal, private, and can not be recovered if lost.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;align=center;" vertex="1" parent="1">
-          <mxGeometry x="260" y="30" width="250" height="120" as="geometry" />
+          <mxGeometry x="570" y="93" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="npg67AFGJDjiDNsVnRZ3-2" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endWidth=23.333333333333336;endSize=24.89166666666667;width=60;fillColor=#ffffff;" edge="1" parent="1" source="-GHyNmHYKPq7vWa3w7rU-3">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="340" y="280" as="sourcePoint" />
-            <mxPoint x="540" y="220" as="targetPoint" />
+            <mxPoint x="340" y="270" as="sourcePoint" />
+            <mxPoint x="540" y="210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="npg67AFGJDjiDNsVnRZ3-3" value="Incremental backups sent periodically" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontStyle=1" vertex="1" connectable="0" parent="npg67AFGJDjiDNsVnRZ3-2">
@@ -37,16 +34,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="npg67AFGJDjiDNsVnRZ3-5" value="&lt;b&gt;No backups&lt;br&gt;&lt;/b&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;(still protected by raidz1)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;opacity=20;" vertex="1" parent="1">
-          <mxGeometry x="260" y="280" width="150" height="40" as="geometry" />
+          <mxGeometry x="260" y="270" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-GHyNmHYKPq7vWa3w7rU-3" value="&lt;b&gt;ZFS tank/archives&lt;br&gt;&lt;/b&gt;compression=lz4&lt;br&gt;encryption=aes-256-gcm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="190" width="150" height="60" as="geometry" />
+          <mxGeometry x="50" y="180" width="150" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="Internal Arch" id="vzJnrldd0c1qB9JZdmv3">
-    <mxGraphModel dx="818" dy="533" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
+    <mxGraphModel dx="988" dy="597" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
       <root>
         <mxCell id="HpQt6Ej-NXhSkaC_cFh1-0" />
         <mxCell id="HpQt6Ej-NXhSkaC_cFh1-1" parent="HpQt6Ej-NXhSkaC_cFh1-0" />
@@ -65,44 +62,50 @@
         <mxCell id="HpQt6Ej-NXhSkaC_cFh1-8" value="&lt;b&gt;ZPOOL tank&lt;br&gt;&lt;/b&gt;3x 2TB HDD&lt;br&gt;raidz1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="60" y="60" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-10" value="&lt;b&gt;@2021_M01&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-10" value="&lt;span&gt;@1605662812&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="50" y="250" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-12" value="&lt;b&gt;@2020_M12&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-12" value="&lt;span&gt;@1605502314&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="50" y="280" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="HpQt6Ej-NXhSkaC_cFh1-13" value="&lt;b&gt;Google Drive&lt;br&gt;&lt;/b&gt;rclone gd:/" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="570" y="50" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-14" value="2020_M07_base.zfs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=none;align=center;size=0.25;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-14" value="1605400577_base.zfs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=none;align=center;size=0.25;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="570" y="210" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-15" value="&lt;b&gt;@2020_M07_base&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-15" value="&lt;span&gt;@1605400577_base&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="50" y="310" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-16" value="2020_M08.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-16" value="1605400577_1605502314.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;fontSize=9;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="570" y="250" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-17" value="2021_M09.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-17" value="1605502314_1605662812.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;fontSize=9;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="570" y="290" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-18" value="%Y_M%m.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-18" value="%s_%s.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="570" y="357" width="130" height="40" as="geometry" />
         </mxCell>
         <mxCell id="HpQt6Ej-NXhSkaC_cFh1-19" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
           <mxGeometry x="616" y="330" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="HpQt6Ej-NXhSkaC_cFh1-20" value="&lt;h1&gt;Internal Architecture&lt;/h1&gt;&lt;p&gt;Only the last few periodic snapshots are retained locally, whereas remote storage contains a base file and all period increments going forward.&lt;/p&gt;&lt;p&gt;The @base snapshot is created when the remote storage is first initialized and is not touched again&lt;/p&gt;&lt;p&gt;Every period, a snapshot is created and an increment is sent to the remote storage. The oldest periodic snapshot is destroyed in accordance with the &quot;local snapshots retained&quot; parameter&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;align=center;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
-          <mxGeometry x="260" y="30" width="250" height="200" as="geometry" />
+        <mxCell id="ng96mBctWofza6et0SA4-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=-0.002;exitY=0.375;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=12;exitPerimeter=0;" edge="1" parent="HpQt6Ej-NXhSkaC_cFh1-1" source="ng96mBctWofza6et0SA4-1" target="HpQt6Ej-NXhSkaC_cFh1-10">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tse8Umh2lWrJmfe9ySyt-0" value="&lt;b style=&quot;font-size: 12px&quot;&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;Parameters:&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Local snapshots retained:&lt;/b&gt; Doesn&#39;t include the base snapshot, shown as 2 in this diagram&lt;/li&gt;&lt;li style=&quot;font-size: 11px&quot;&gt;&lt;b&gt;Snapshot period:&lt;/b&gt; Shown as 1 month in this diagram, snapshot names should be chosen so they are not ambiguous given the choice of period&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=11;opacity=50;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
-          <mxGeometry x="240" y="240" width="280" height="120" as="geometry" />
+        <mxCell id="ng96mBctWofza6et0SA4-1" value="Unix timestamp of the snapshots&#39; &quot;creation&quot; property" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=12;opacity=50;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="290" y="250" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ng96mBctWofza6et0SA4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=12;" edge="1" parent="HpQt6Ej-NXhSkaC_cFh1-1" source="ng96mBctWofza6et0SA4-2" target="HpQt6Ej-NXhSkaC_cFh1-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ng96mBctWofza6et0SA4-2" value="&amp;lt;previous&amp;gt;_&amp;lt;next&amp;gt;.zfsi" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=12;opacity=50;" vertex="1" parent="HpQt6Ej-NXhSkaC_cFh1-1">
+          <mxGeometry x="310" y="290" width="140" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="Initialize" id="cofP7T9EM-FGZ8RabKio">
-    <mxGraphModel dx="818" dy="533" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
+    <mxGraphModel dx="818" dy="494" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
       <root>
         <mxCell id="0Wr0nN8OQr0QDUOuUOFK-0" />
         <mxCell id="0Wr0nN8OQr0QDUOuUOFK-1" parent="0Wr0nN8OQr0QDUOuUOFK-0" />
@@ -120,22 +123,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_yrOJepQ_6mpStZRwek_-3" value="zfs send -Rw tank/archives@2020_M07_base \&lt;br&gt;&amp;gt; 2020_M07_base.zfs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="2aMbnrLA5fNozRiJ_EdC-1">
+        <mxCell id="_yrOJepQ_6mpStZRwek_-3" value="zfs send -Rw tank/archives&lt;span style=&quot;background-color: rgb(248, 249, 250); font-size: 12px;&quot;&gt;@1605400577&lt;/span&gt;_base \&lt;br style=&quot;font-size: 12px;&quot;&gt;&amp;gt;&amp;nbsp;&lt;span style=&quot;background-color: rgb(248, 249, 250); font-size: 12px;&quot;&gt;1605400577_base&lt;/span&gt;.zfs" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="2aMbnrLA5fNozRiJ_EdC-1">
           <mxGeometry x="-0.3278" y="-1" relative="1" as="geometry">
-            <mxPoint x="37.93" y="16.49" as="offset" />
+            <mxPoint x="-102.07" y="16.49" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_yrOJepQ_6mpStZRwek_-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=16;" edge="1" parent="0Wr0nN8OQr0QDUOuUOFK-1" source="0Wr0nN8OQr0QDUOuUOFK-4" target="0Wr0nN8OQr0QDUOuUOFK-13">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="250" y="205" />
-              <mxPoint x="250" y="257" />
+              <mxPoint x="230" y="205" />
+              <mxPoint x="230" y="257" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_yrOJepQ_6mpStZRwek_-2" value="zfs snapshot tank/archives@2020_M07_base" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_yrOJepQ_6mpStZRwek_-1">
+        <mxCell id="_yrOJepQ_6mpStZRwek_-2" value="zfs snapshot tank/archives&lt;span style=&quot;text-align: center ; background-color: rgb(248 , 249 , 250)&quot;&gt;@base&lt;br&gt;zfs rename ...&lt;br&gt;&lt;/span&gt;" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="_yrOJepQ_6mpStZRwek_-1">
           <mxGeometry x="-0.6419" y="2" relative="1" as="geometry">
-            <mxPoint x="152.41" y="27" as="offset" />
+            <mxPoint x="19.999999999999996" y="27" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0Wr0nN8OQr0QDUOuUOFK-4" value="&lt;b&gt;ZFS tank/archives&lt;br&gt;&lt;/b&gt;compression=lz4&lt;br&gt;encryption=aes-256-gcm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
@@ -147,20 +150,17 @@
         <mxCell id="0Wr0nN8OQr0QDUOuUOFK-11" value="&lt;b&gt;Google Drive&lt;br&gt;&lt;/b&gt;rclone gd:/" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
           <mxGeometry x="570" y="50" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-12" value="2020_M07_base.zfs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=none;align=center;size=0.25;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-12" value="1605400577_base.zfs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=none;align=center;size=0.25;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
           <mxGeometry x="570" y="210" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-13" value="&lt;b&gt;@2020_M07_base&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
+        <mxCell id="0Wr0nN8OQr0QDUOuUOFK-13" value="@1605400577_base" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
           <mxGeometry x="50" y="250" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="2aMbnrLA5fNozRiJ_EdC-0" value="&lt;h1&gt;Initialization&lt;/h1&gt;&lt;p&gt;The dataset is snapshot to @base and a full send is executed and sent to remote storage&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;align=center;" vertex="1" parent="0Wr0nN8OQr0QDUOuUOFK-1">
-          <mxGeometry x="260" y="30" width="250" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="Incremental Backup" id="_9e9zvw17JblkfMjJDrS">
-    <mxGraphModel dx="818" dy="533" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
+    <mxGraphModel dx="818" dy="494" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="480" math="0" shadow="0">
       <root>
         <mxCell id="Dsu6ImqsWFirkIyhKRx3-0" />
         <mxCell id="Dsu6ImqsWFirkIyhKRx3-1" parent="Dsu6ImqsWFirkIyhKRx3-0" />
@@ -178,9 +178,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-8" value="zfs snapshot tank/archives@2021_M01" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="BSZRfIyCe6NDJ4Em-f5b-1">
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-8" value="&lt;span&gt;zfs snapshot tank/archives@next&lt;br&gt;&lt;/span&gt;zfs rename ..." style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="BSZRfIyCe6NDJ4Em-f5b-1">
           <mxGeometry x="-0.213" y="2" relative="1" as="geometry">
-            <mxPoint x="138" y="-8.66" as="offset" />
+            <mxPoint x="8" y="6.17" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Dsu6ImqsWFirkIyhKRx3-6" value="&lt;b&gt;ZFS tank/archives&lt;br&gt;&lt;/b&gt;compression=lz4&lt;br&gt;encryption=aes-256-gcm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
@@ -189,37 +189,34 @@
         <mxCell id="Dsu6ImqsWFirkIyhKRx3-8" value="&lt;b&gt;ZPOOL tank&lt;br&gt;&lt;/b&gt;3x 2TB HDD&lt;br&gt;raidz1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="60" y="60" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Dsu6ImqsWFirkIyhKRx3-10" value="&lt;b&gt;@2020_M11&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-10" value="@1605502314" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="50" y="310" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="BSZRfIyCe6NDJ4Em-f5b-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;startSize=12;endArrow=none;endFill=0;endSize=12;fillColor=#ffffff;fontSize=12;" edge="1" parent="Dsu6ImqsWFirkIyhKRx3-1" source="Dsu6ImqsWFirkIyhKRx3-12" target="BSZRfIyCe6NDJ4Em-f5b-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Dsu6ImqsWFirkIyhKRx3-12" value="&lt;b&gt;@2020_M12&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-12" value="@1605662812" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="50" y="280" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Dsu6ImqsWFirkIyhKRx3-13" value="&lt;b&gt;Google Drive&lt;br&gt;&lt;/b&gt;rclone gd:/" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeColor=none;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="570" y="50" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Dsu6ImqsWFirkIyhKRx3-14" value="2020_M07_base.zfs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=none;align=center;size=0.25;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-14" value="1605400577_base.zfs" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=none;align=center;size=0.25;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="570" y="210" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Dsu6ImqsWFirkIyhKRx3-15" value="&lt;b&gt;@2020_M07_base&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-15" value="@1605400577_base" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="50" y="340" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Dsu6ImqsWFirkIyhKRx3-16" value="2020_M12.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-16" value="1605502314_1605662812.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;fontSize=9;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="570" y="270" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Dsu6ImqsWFirkIyhKRx3-17" value="2021_M01.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+        <mxCell id="Dsu6ImqsWFirkIyhKRx3-17" value="1605662812_1605723987.zfsi" style="shape=tape;whiteSpace=wrap;html=1;fillColor=none;align=center;size=0.2;fontSize=9;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="570" y="310" width="130" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Dsu6ImqsWFirkIyhKRx3-20" value="&lt;h1&gt;Incremental Backup&lt;/h1&gt;&lt;p&gt;Every period, a new dataset snapshot is created and then the increment between this and the previous snapshot is sent to remote storage. Finally any snapshots past the set number of local snapshots are destroyed (except for the base)&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;align=center;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
-          <mxGeometry x="260" y="30" width="250" height="120" as="geometry" />
         </mxCell>
         <mxCell id="BSZRfIyCe6NDJ4Em-f5b-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startSize=12;endArrow=none;endFill=0;endSize=12;fillColor=#ffffff;fontSize=12;" edge="1" parent="Dsu6ImqsWFirkIyhKRx3-1" source="BSZRfIyCe6NDJ4Em-f5b-0" target="BSZRfIyCe6NDJ4Em-f5b-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-0" value="&lt;b&gt;@2021_M01&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-0" value="@1605723987" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="50" y="250" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="BSZRfIyCe6NDJ4Em-f5b-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=12;" edge="1" parent="Dsu6ImqsWFirkIyhKRx3-1" source="BSZRfIyCe6NDJ4Em-f5b-3" target="Dsu6ImqsWFirkIyhKRx3-17">
@@ -230,7 +227,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-7" value="zfs send -wi tank/archives@2020_M12 \&lt;br&gt;tank/archives@2021_M01 &amp;gt; 2021_M01.zfsi" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="BSZRfIyCe6NDJ4Em-f5b-6">
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-7" value="&lt;font style=&quot;font-size: 12px&quot;&gt;zfs send -wi tank/archives&lt;span style=&quot;background-color: rgb(248 , 249 , 250)&quot;&gt;@1605662812&lt;/span&gt;&amp;nbsp;\&lt;br&gt;tank/archives&lt;span style=&quot;background-color: rgb(248 , 249 , 250)&quot;&gt;@160572398&lt;font style=&quot;font-size: 12px&quot;&gt;7&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;&amp;nbsp;&amp;gt; \&lt;br&gt;&lt;span style=&quot;background-color: rgb(248 , 249 , 250)&quot;&gt;1605662812_1605723987.zfsi&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="BSZRfIyCe6NDJ4Em-f5b-6">
           <mxGeometry x="-0.7711" y="2" relative="1" as="geometry">
             <mxPoint x="1.0300000000000011" y="48.010000000000005" as="offset" />
           </mxGeometry>
@@ -244,8 +241,8 @@
         <mxCell id="BSZRfIyCe6NDJ4Em-f5b-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startSize=12;endArrow=block;endFill=1;endSize=12;fillColor=#ffffff;fontSize=11;" edge="1" parent="Dsu6ImqsWFirkIyhKRx3-1" source="BSZRfIyCe6NDJ4Em-f5b-12" target="Dsu6ImqsWFirkIyhKRx3-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-12" value="zfs destroy tank/archives@2020_M11" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=11;opacity=50;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
-          <mxGeometry x="280" y="380" width="190" height="20" as="geometry" />
+        <mxCell id="BSZRfIyCe6NDJ4Em-f5b-12" value="zf&lt;font style=&quot;font-size: 11px&quot;&gt;s destroy tank/archives&lt;span style=&quot;background-color: rgb(248 , 249 , 250)&quot;&gt;@1605502314&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=11;opacity=50;" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
+          <mxGeometry x="280" y="380" width="200" height="20" as="geometry" />
         </mxCell>
         <mxCell id="_eyJa2z6mlq-MGPUq4mG-0" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#FFFFFF;fontSize=15;opacity=50;fontStyle=1" vertex="1" parent="Dsu6ImqsWFirkIyhKRx3-1">
           <mxGeometry x="618" y="244" width="40" height="20" as="geometry" />
