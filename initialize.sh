@@ -10,6 +10,7 @@ fi
 dataset=$1
 remote_dir=$2
 
+# Temp file for holding the remote directory listing cache
 files=$(tempfile)
 function rmtemp {
 	rm -f "$files"

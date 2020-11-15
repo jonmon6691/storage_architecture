@@ -15,28 +15,28 @@ else
 	exit
 fi
 
+# Temp file for holding the remote directory listing cache
 files=$(tempfile)
 function rmtemp {
 	rm -f "$files"
 }
 trap rmtemp EXIT
 
+# Remote directory listing is cached because it's probably slow
 ls -1 $remote_dir > $files
 
+# Attempt to resume a restore if the dataset already exists
 if [[ $(grep "^$dataset$" <(zfs list -o name)) != "" ]]
 then
 	prev_snapshot=`zfs list -s creation -o name,tag:offsite -pH -t snapshot $dataset | awk '$2 == "offsite" {print $1}' | tail -n 1`
 	i_stamp=`zfs list -o creation -pH -t snapshot $prev_snapshot`
-else
+else # otherwise start at the base
 	i_stamp='base'
 fi
 
-if [[ $prev_stamp != "" ]]
-then
-	i_stamp=$prev_stamp
-fi
 while [[ 1 ]]
 do
+	# Find next zfs file given the current stamp
     matches=$(grep "${i_stamp}_[[:digit:]]\+.zfs" $files)
     if [[ $matches == "" ]]
     then
@@ -53,7 +53,10 @@ do
         echo "Error: Encountered a fork while restoring!"
         exit
     fi
+
 	echo "[restoring] $matches"
 	(set -x; cat $remote_dir/$matches | zfs recv -o tag:offsite=offsite $dataset) || exit
+
+	# Extract next stamp from filename
     i_stamp=$(echo "$matches" | awk -F '.' '{print $1}' | awk -F '_' '{print $2}')
 done

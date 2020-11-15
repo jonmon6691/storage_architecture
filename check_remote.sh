@@ -16,7 +16,14 @@ else
 	exit
 fi
 
+# Temp file for holding the remote directory listing cache
 files=$(tempfile)
+function rmtemp {
+	rm -f "$files"
+}
+trap rmtemp EXIT
+
+# Remote directory listing is cached because it's probably slow
 ls -1 $remote_dir > $files
 
 # get latest_stamp
