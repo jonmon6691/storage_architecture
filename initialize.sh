@@ -10,15 +10,16 @@ then
 	exit
 fi
 
-# Generate snapshot name
-snapshot=`date +%Y_M%m_base`
-base_file=${snapshot}.zfs
-
 # Create snapshot
-(set -x; zfs snapshot ${dataset}@${snapshot}) || exit
+tmp_name=${dataset}@base
+(set -x; zfs snapshot ${tmp_name}) || exit
+stamp=`zfs list -o creation -pHt snapshot ${tmp_name}`
+base_name=${dataset}@${stamp}_base
+(set -x; zfs rename ${tmp_name} ${base_name}) || exit
 
 # Verify remote
 
 # Create base_file
-(set -x; zfs send --raw --replicate ${dataset}@${snapshot} > ${remote}/${base_file}) || exit
+base_file=${stamp}_base.zfs
+(set -x; zfs send --raw --replicate ${base_name} > ${remote}/${base_file}) || exit
 
