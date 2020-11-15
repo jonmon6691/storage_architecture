@@ -26,7 +26,7 @@ ls -1 $remote_dir > $files
 if [[ $(grep "^$dataset$" <(zfs list -o name)) != "" ]]
 then
 	prev_snapshot=`zfs list -s creation -o name,tag:offsite -pH -t snapshot $dataset | awk '$2 == "offsite" {print $1}' | tail -n 1`
-	i_stamp=`zfs list -o creation -pH -t snapshot ${prev_snapshot}`
+	i_stamp=`zfs list -o creation -pH -t snapshot $prev_snapshot`
 else
 	i_stamp='base'
 fi

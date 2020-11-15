@@ -27,22 +27,22 @@ then
 fi
 
 # Create snapshot
-tmp_name=${dataset}@base
-(set -x; zfs snapshot ${tmp_name}) || exit
-stamp=`zfs list -o creation -pHt snapshot ${tmp_name}`
-base_name=${dataset}@${stamp}_base
-(set -x; zfs rename ${tmp_name} ${base_name}) || exit
+tmp_name=$dataset@base
+(set -x; zfs snapshot $tmp_name) || exit
+stamp=`zfs list -o creation -pHt snapshot $tmp_name`
+base_name=$dataset@$stamp_base
+(set -x; zfs rename $tmp_name $base_name) || exit
 
 # Verify remote
 
 # Create base_file
-base_path=${remote_dir}/base_${stamp}.zfs
-(set -x; zfs send --raw --replicate ${base_name} > ${base_path}) || exit
+base_path=$remote_dir/base_$stamp.zfs
+(set -x; zfs send --raw --replicate $base_name > $base_path) || exit
 
 # Verify increment on remote, tag snapshot if all is well
-if [[ -f ${base_path} && `stat -c %s ${base_path}` -gt 0 ]]
+if [[ -f $base_path && `stat -c %s $base_path` -gt 0 ]]
 then
-	(set -x; zfs set tag:offsite=offsite ${base_name})
+	(set -x; zfs set tag:offsite=offsite $base_name)
 fi
 
 echo "dataset=$dataset" > backup_args.bash
