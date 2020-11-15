@@ -1,8 +1,5 @@
 #!/bin/bash
 
-dataset=$1
-remote_dir=$2
-
 if [[ $# -lt 2 ]]
 then
 	echo "Usage: ./initialize.sh <dataset_source> <remote_directory>" 
@@ -10,13 +7,22 @@ then
 	exit
 fi
 
+dataset=$1
+remote_dir=$2
+
+files=$(tempfile)
+function rmtemp {
+	rm -f "$files"
+}
+trap rmtemp EXIT
+
 # Check no base on remote already
-files=".check_remote.cache"
 ls -1 $remote_dir > $files
-base=$(grep "_base.zfs" $files)
+base=$(grep "base_[[:digit:]]\+.zfs$" $files)
 if [[ $base != "" ]]
 then
-	echo "Error: remote already contains a base!"
+	echo "[exists] $remote_dir/$base"
+	echo "[failed] Remote already contains a base!"
 	exit
 fi
 
