@@ -30,7 +30,5 @@ increment_file=${prev_stamp}_${next_stamp}.zfsi
 (set -x; zfs send --raw -i ${prev_snapshot} ${dataset}@${next_stamp} > ${remote_dir}/${increment_file}) || exit
 
 # Delete old snapshot
+#TODO
 
-echo ${dataset}
-echo ${remote_dir}
-echo ${keep_snapshots}
