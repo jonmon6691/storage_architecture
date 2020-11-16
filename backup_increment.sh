@@ -4,7 +4,7 @@ dataset=""
 remote_dir=""
 keep_snapshots=-1
 
-if [[ -f "backup_args.bash" ]]
+if [[ -f "backup_args.env" ]]
 then
 	. backup_args.bash
 elif [[ $# -ge 2 ]]

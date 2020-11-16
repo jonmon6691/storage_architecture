@@ -6,7 +6,7 @@ if [[ $# -ge 2 ]]
 then
 	dataset=$1
 	remote_dir=$2
-elif [[ -f "backup_args.bash" ]]
+elif [[ -f "backup_args.env" ]]
 then
 	. backup_args.bash
 else

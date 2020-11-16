@@ -51,5 +51,5 @@ then
 	(set -x; sudo zfs set tag:offsite=offsite $base_name)
 fi
 
-echo "dataset=$dataset" > backup_args.bash
-echo "remote_dir=$remote_dir" >> backup_args.bash
+echo "dataset=$dataset" > backup_args.env
+echo "remote_dir=$remote_dir" >> backup_args.env
