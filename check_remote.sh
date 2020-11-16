@@ -31,13 +31,19 @@ latest_stamp=$(zfs list -s creation -o creation,tag:offsite,name -pHt snapshot $
 latest_stamp_name=$(echo "$latest_stamp" | awk '{print $3}')
 echo "Latest local snapshot that was verified as sent offsite: $latest_stamp_name"
 
+checksums_pass=1
 i_stamp=$(echo "$latest_stamp" | awk '{print $1}')
 while [[ 1 ]]
 do
 	# Check if we're at the base file
 	if [[ $i_stamp == "base" ]]
 	then
-		echo "[Passed] Remote appears coherent"
+		if [[ $checksums_pass -ne 0 ]]
+		then
+			echo "[Passed] Remote appears coherent"
+		else
+			echo "[Failed] Bad checksums"
+		fi
 		exit
 	fi
 
@@ -56,12 +62,13 @@ do
 	fi
 	
 	# check file integrity
-	check=$(rclone ls $remote_dir/$matches/rpipe.md5 | awk '{print $1}')
-	if [[ $? -eq 0 && $check -gt 0 ]]
+	./rpipe/rpipe.py --verify $remote_dir/$matches
+	if [[ $? -eq 0 ]]
 	then
-		echo "[good] $matches"
+		echo "[checksum matched] $matches"
 	else
-		echo "[no data] $matches"
+		echo "[checksum failed] $matches"
+		checksums_pass=0
 	fi
 
 	# get next_stamp
