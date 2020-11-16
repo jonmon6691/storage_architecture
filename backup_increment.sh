@@ -6,7 +6,7 @@ keep_snapshots=-1
 
 if [[ -f "backup_args.env" ]]
 then
-	. backup_args.bash
+	. backup_args.env
 elif [[ $# -ge 2 ]]
 then
 	dataset=$1
