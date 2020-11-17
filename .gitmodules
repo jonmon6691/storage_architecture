@@ -1,0 +1,3 @@
+[submodule "rpipe"]
+	path = rpipe
+	url = git@github.com:jonmon6691/rpipe.git

@@ -3,9 +3,9 @@
 dataset=""
 remote_dir=""
 
-if [[ -f "backup_args.bash" ]]
+if [[ -f "backup_args.env" ]]
 then
-	. backup_args.bash
+	. backup_args.env
 elif [[ $# -ge 2 ]]
 then
 	dataset=$1
@@ -24,28 +24,34 @@ function rmtemp {
 trap rmtemp EXIT
 
 # Remote directory listing is cached because it's probably slow
-ls -1 $remote_dir > $files
+rclone lsf $remote_dir > $files
 
 # get latest_stamp
 latest_stamp=$(zfs list -s creation -o creation,tag:offsite,name -pHt snapshot $dataset | awk '$2 == "offsite"' | tail -n1)
 latest_stamp_name=$(echo "$latest_stamp" | awk '{print $3}')
 echo "Latest local snapshot that was verified as sent offsite: $latest_stamp_name"
 
+checksums_pass=1
 i_stamp=$(echo "$latest_stamp" | awk '{print $1}')
 while [[ 1 ]]
 do
 	# Check if we're at the base file
 	if [[ $i_stamp == "base" ]]
 	then
-		echo "[Passed] Remote appears coherent"
+		if [[ $checksums_pass -ne 0 ]]
+		then
+			echo "[Passed] Remote appears coherent"
+		else
+			echo "[Failed] Bad checksums"
+		fi
 		exit
 	fi
 
 	# Find the file(s) that connect
-	matches=$(grep "_$i_stamp.zfs" $files)
+	matches=$(grep "_$i_stamp/$" $files | awk -F "/" '{print $1}')
 	if [[ $matches == "" ]]
 	then
-		echo "[Not found] *_$i_stamp.zfs"
+		echo "[Not found] *_$i_stamp/"
 		echo "[Failed] Remote is missing a link!"
 		exit
 	elif [[ $(echo "$matches" | wc -l) -ne 1 ]]
@@ -56,14 +62,16 @@ do
 	fi
 	
 	# check file integrity
-	if [[ $(stat -c %s $remote_dir/$matches) -eq 0 ]]
+	./rpipe/rpipe.py --verify $remote_dir/$matches
+	if [[ $? -eq 0 ]]
 	then
-		echo "$matches is empty!"
-		echo "Maybe there's a way to get a checksum?"
-		exit
+		echo "[checksum matched] $matches"
+	else
+		echo "[checksum failed] $matches"
+		checksums_pass=0
 	fi
-	echo "[checked] $matches"
 
 	# get next_stamp
 	i_stamp=$(echo "$matches" | awk -F "_" '{print $1}')
 done
+
