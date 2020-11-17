@@ -30,25 +30,27 @@ then
 	fi
 fi
 
+(set -x; sudo zfs allow -u $USER create,hold,mount,rename,send,snapshot,userprop $dataset)
+
 # Create snapshot
 tmp_name=$dataset@base
 (set -x; zfs snapshot $tmp_name) || exit
 stamp=`zfs list -o creation -pHt snapshot $tmp_name`
 base_name=$dataset@base_$stamp
-(set -x; sudo zfs rename $tmp_name $base_name) || exit
+(set -x; zfs rename $tmp_name $base_name) || exit
 
 # Verify remote
 
 # Create base_file
 base_path=$remote_dir/base_$stamp
 rclone mkdir $base_path
-(set -x; sudo zfs send --raw --replicate $base_name | ./rpipe/rpipe.py $base_path) || exit
+(set -x; zfs send --raw --replicate $base_name | ./rpipe/rpipe.py $base_path) || exit
 
 # Verify increment on remote, tag snapshot if all is well
 check=$(rclone ls $base_path/rp-aaaaaa | awk '{print $1}')
 if [[ $? -eq 0 && $check -gt 0 ]]
 then
-	(set -x; sudo zfs set tag:offsite=offsite $base_name)
+	(set -x; zfs set tag:offsite=offsite $base_name)
 fi
 
 echo "dataset=$dataset" > backup_args.env
