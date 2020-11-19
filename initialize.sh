@@ -46,11 +46,14 @@ base_path=$remote_dir/base_$stamp
 rclone mkdir $base_path
 (set -x; zfs send --raw --replicate $base_name | ./rpipe/rpipe.py $base_path) || exit
 
-# Verify increment on remote, tag snapshot if all is well
-check=$(rclone ls $base_path/rp-aaaaaa | awk '{print $1}')
-if [[ $? -eq 0 && $check -gt 0 ]]
+# check file integrity
+./rpipe/rpipe.py --verify $base_path
+if [[ $? -eq 0 ]]
 then
+	echo "[checksum verified] Initialization complete"
 	(set -x; zfs set tag:offsite=offsite $base_name)
+else
+	echo "[checksum failed] Initialization could not verify data on remote"
 fi
 
 echo "dataset=$dataset" > backup_args.env

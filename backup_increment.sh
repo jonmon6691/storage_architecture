@@ -4,16 +4,16 @@ dataset=""
 remote_dir=""
 keep_snapshots=-1
 
-if [[ -f "backup_args.env" ]]
-then
-	. backup_args.env
-elif [[ $# -ge 2 ]]
+if [[ $# -ge 2 ]]
 then
 	dataset=$1
 	remote_dir=$2
+elif [[ -f "backup_args.env" ]]
+then
+	. backup_args.env
 else
 	echo "usage: ./backup_increment.sh <dataset_source> <remote_dir>"
-	echo "	example: ./backup_increment.sh tank/archives ~/rclone/gdrive"
+	echo "	example: ./backup_increment.sh tank/archives gdrive:"
 	exit
 fi
 
@@ -31,12 +31,14 @@ rclone mkdir $increment_file
 (set -x; zfs send --raw -i $prev_snapshot $dataset@$next_stamp | ./rpipe/rpipe.py $increment_file) || exit
 
 # Verify increment on remote, tag snapshot if all is well
-check=$(rclone ls $increment_file/rp-aaaaaa | awk '{print $1}')
-if [[ $? -eq 0 && $check -gt 0 ]]
+./rpipe/rpipe.py --verify $increment_file
+if [[ $? -eq 0 ]]
 then
+	echo "[checksum matched] Backup sent successfully"
 	(set -x; zfs set tag:offsite=offsite $dataset@$next_stamp)
+else
+	echo "[checksum failed] Could not verify the sent backup"
 fi
-
 
 # Delete old snapshot
 #TODO

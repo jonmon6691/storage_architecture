@@ -3,16 +3,16 @@
 dataset=""
 remote_dir=""
 
-if [[ -f "backup_args.env" ]]
-then
-	. backup_args.env
-elif [[ $# -ge 2 ]]
+if [[ $# -ge 2 ]]
 then
 	dataset=$1
 	remote_dir=$2
+elif [[ -f "backup_args.env" ]]
+then
+	. backup_args.env
 else
 	echo "usage: ./check_remote.sh <dataset_source> <remote_dir>"
-	echo "	example: ./check_remote.sh tank/archives ~/rclone/gdrive"
+	echo "	example: ./check_remote.sh tank/archives gdrive:"
 	exit
 fi
 

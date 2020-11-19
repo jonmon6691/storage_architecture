@@ -10,8 +10,8 @@ elif [[ -f "backup_args.env" ]]
 then
 	. backup_args.env
 else
-	echo "usage: ./check_remote.sh <dataset_source> <remote_dir>"
-	echo "	example: ./check_remote.sh tank/archives ~/rclone/gdrive"
+	echo "usage: ./restore.sh <dataset_source> <remote_dir>"
+	echo "	example: ./restore.sh tank/archives gdrive:"
 	exit
 fi
 
