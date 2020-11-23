@@ -62,7 +62,7 @@ do
 	fi
 	
 	# check file integrity
-	./rpipe/rpipe.py --verify $remote_dir/$matches
+	./rpipe/rpipe.py --verify --repair $remote_dir/$matches
 	if [[ $? -eq 0 ]]
 	then
 		echo "[checksum matched] $matches"

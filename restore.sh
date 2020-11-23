@@ -55,7 +55,7 @@ do
     fi
 
 	echo "[restoring] $matches"
-	(set -x; ./rpipe/rpipe.py --replay $remote_dir/$matches | sudo zfs recv -o tag:offsite=offsite $dataset) || exit
+	(set -x; ./rpipe/rpipe.py --replay --repair $remote_dir/$matches | sudo zfs recv -o tag:offsite=offsite $dataset) || exit
 
 	# Extract next stamp from filename
     i_stamp=$(echo "$matches" | awk -F '_' '{print $2}')

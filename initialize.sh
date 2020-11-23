@@ -44,10 +44,10 @@ base_name=$dataset@base_$stamp
 # Create base_file
 base_path=$remote_dir/base_$stamp
 rclone mkdir $base_path
-(set -x; zfs send --raw --replicate $base_name | ./rpipe/rpipe.py $base_path) || exit
+(set -x; zfs send --raw --replicate $base_name | ./rpipe/rpipe.py --parchive $base_path) || exit
 
 # check file integrity
-./rpipe/rpipe.py --verify $base_path
+./rpipe/rpipe.py --verify --repair $base_path
 if [[ $? -eq 0 ]]
 then
 	echo "[checksum verified] Initialization complete"

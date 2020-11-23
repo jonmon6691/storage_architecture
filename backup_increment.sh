@@ -28,10 +28,10 @@ next_stamp=`zfs list -o creation -pHt snapshot $dataset@next`
 # Send increment
 increment_file=$remote_dir/${prev_stamp}_$next_stamp
 rclone mkdir $increment_file
-(set -x; zfs send --raw -i $prev_snapshot $dataset@$next_stamp | ./rpipe/rpipe.py $increment_file) || exit
+(set -x; zfs send --raw -i $prev_snapshot $dataset@$next_stamp | ./rpipe/rpipe.py --parchive $increment_file) || exit
 
 # Verify increment on remote, tag snapshot if all is well
-./rpipe/rpipe.py --verify $increment_file
+./rpipe/rpipe.py --verify --repair $increment_file
 if [[ $? -eq 0 ]]
 then
 	echo "[checksum matched] Backup sent successfully"
