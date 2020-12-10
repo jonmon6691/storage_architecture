@@ -1,0 +1,105 @@
+#!/bin/bash
+
+ssh_destination="jon@desktop.local"
+remote_user="jon"
+ssh_cmd="ssh -o PasswordAuthentication=no $ssh_destination"
+local_dataset="tpool/data"
+remote_dataset="remote/data"
+remote_dataset_parent="remote"
+
+usage () {
+	echo "Usage: ./initialize.sh <dataset_source> <remote_directory>" 
+	echo "	Example: ./initialize.sh tank/archives ~/rclone/gdrive/"
+}
+
+if [[ $# -lt 1 ]]
+then
+	usage
+	exit 1
+fi
+
+init_remote () {
+	# Check agent is running and load key
+	ssh-add > /dev/null
+	if [[ $? -ne 0 ]]
+	then
+		echo "Is your ssh agent running?"
+		exit 1
+	fi
+	# Check remote
+	$ssh_cmd zpool status > /dev/null
+	if [[ $? -ne 0 ]]; then
+		exit $?
+	fi
+}
+
+case $1 in
+	"init")
+		init_remote
+
+		# Check no overwrite
+		$ssh_cmd zfs list $remote_dataset -t all
+		if [[ $? -eq 0 ]]; then
+			echo "Error: Remote dataset exists!"
+			exit 1
+		fi
+
+		# Initialize permissions
+		(set -x; sudo zfs allow -u $USER snapshot,rename,mount,create,hold,send,userprop $local_dataset)
+		
+		# Create snapshot locally
+		tmp_name=$local_dataset@base
+		(set -x; zfs snapshot $tmp_name) || exit
+		stamp=`zfs list -o creation -pHt snapshot $tmp_name`
+		base_name=$local_dataset@base_$stamp
+		(set -x; zfs rename $tmp_name $base_name) || exit
+
+		# Initialize permissions on remote
+		(set -x; $ssh_cmd -t sudo zfs allow -u $remote_user receive,mount,create $remote_dataset_parent)
+
+		# Send data
+		(set -x; zfs send --raw --replicate $base_name | $ssh_cmd zfs receive -s $remote_dataset) || exit
+
+		# Verify send
+		resume_token=$($ssh_cmd zfs get receive_resume_token -Hpo value $remote_dataset)
+		if [[ "$resume_token" != "-" ]]; then
+			echo "Error: Resume token is set! Try $ $0 resume"
+			exit 1
+		else
+			(set -x; zfs set tag:offsite=offsite $base_name)
+		fi
+
+		;;
+	"backup")
+		# Check remote
+		# Check remote resume tags
+		# Make snapshot
+		# Send data
+		# Verify send
+		;;
+	"resume")
+		# Check remote
+		# Check remote resume tags
+		# Restart transfer
+		# Verify send
+		;;
+	"restore")
+		# Check remote
+		# Check no local overwrite would occur
+		# Receive data
+		# Verify receive
+		;;
+	"scrub")
+		# Check remote
+		# Start scrub
+		;;
+	"check")
+		# Check remote
+		# Check scrub state
+		;;
+	*)
+		echo "Error: Command not recognized: $1"
+		usage
+		exit 1
+esac
+
