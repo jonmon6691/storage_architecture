@@ -1,15 +1,25 @@
 #!/bin/bash
+#TODO: Test resume
+#TODO: Snapshot names don't have to be timestamps
+#TODO: Clean up after errors better, delete intermediate snapshots etc.
+#TODO: Progress bar isn't very good...
 
-ssh_destination="jon@desktop.local"
-remote_user="jon"
-ssh_cmd="ssh -o PasswordAuthentication=no $ssh_destination"
-local_dataset="tpool/data"
-remote_dataset="remote/data"
-remote_dataset_parent="remote"
+. backup_config.env
 
 usage () {
-	echo "Usage: ./initialize.sh <dataset_source> <remote_directory>" 
-	echo "	Example: ./initialize.sh tank/archives ~/rclone/gdrive/"
+	cat <<EOU
+usage: $0 command args ...
+where 'command' is one of the following:
+
+    init
+    backup
+    resume
+    restore
+    scrub
+    check
+
+Essential arguments are sourced from backup_config.env
+EOU
 }
 
 if [[ $# -lt 1 ]]
@@ -19,17 +29,16 @@ then
 fi
 
 init_remote () {
-	# Check agent is running and load key
-	ssh-add > /dev/null
-	if [[ $? -ne 0 ]]
-	then
-		echo "Is your ssh agent running?"
-		exit 1
-	fi
 	# Check remote
-	$ssh_cmd zpool status > /dev/null
+	$ssh_cmd true > /dev/null
 	if [[ $? -ne 0 ]]; then
-		exit $?
+        # Check agent is running and load key
+        ssh-add > /dev/null
+        if [[ $? -ne 0 ]]
+        then
+            echo "Is your ssh agent running?"
+            exit 1
+        fi
 	fi
 }
 
@@ -37,8 +46,8 @@ case $1 in
 	"init")
 		init_remote
 
-		# Check no overwrite
-		$ssh_cmd zfs list $remote_dataset -t all
+		# Check that the dataset doesn't already exist on the remote
+		$ssh_cmd zfs list $remote_dataset -t all > /dev/null
 		if [[ $? -eq 0 ]]; then
 			echo "Error: Remote dataset exists!"
 			exit 1
@@ -55,10 +64,13 @@ case $1 in
 		(set -x; zfs rename $tmp_name $base_name) || exit
 
 		# Initialize permissions on remote
-		(set -x; $ssh_cmd -t sudo zfs allow -u $remote_user receive,mount,create $remote_dataset_parent)
+		(set -x; $ssh_cmd -t sudo zfs allow -u $remote_user receive,mount,create,userprop $remote_dataset_parent)
 
 		# Send data
-		(set -x; zfs send --raw --replicate $base_name | $ssh_cmd zfs receive -s $remote_dataset) || exit
+        est_size=$(zfs send -Pnw $base_name | awk '/^size/ {print $2}')
+        echo
+        echo Data estimated to be $(numfmt --to=iec "$est_size") bytes, this is usually an overestimate, expect less than 100% x-fer
+		(set -x; zfs send --raw $base_name | pv -s $est_size | $ssh_cmd zfs receive -s $remote_dataset) || exit
 
 		# Verify send
 		resume_token=$($ssh_cmd zfs get receive_resume_token -Hpo value $remote_dataset)
@@ -70,19 +82,66 @@ case $1 in
 		fi
 
 		;;
+
 	"backup")
 		# Check remote
+		init_remote
+
 		# Check remote resume tags
-		# Make snapshot
+		resume_token=$($ssh_cmd zfs get receive_resume_token -Hpo value $remote_dataset)
+		if [[ "$resume_token" != "-" ]]; then
+			echo "Error: Resume token is set! Try $ $0 resume"
+			exit 1
+		fi
+
+        # Get latest snapshot we remember sending
+        prev_snap=$(zfs list -s creation -o name,tag:offsite -pH -t snapshot $dataset | awk '$2 == "offsite" {print $1}' | tail -n 1)
+
+        # Make snapshot
+        (set -x; zfs snapshot $local_dataset@next) || exit
+        new_snap_creation=$(zfs list -o creation -pHt snapshot $local_dataset@next)
+        new_snap="$local_dataset@$new_snap_creation"
+        (set -x; zfs rename $local_dataset@next $new_snap) || exit
+
 		# Send data
+        est_size=$(zfs send -Pnwi $prev_snap $new_snap | awk '/^size/ {print $2}')
+        (set -x; zfs send --raw -i $prev_snap $new_snap | pv -s $est_size | $ssh_cmd zfs receive -s $remote_dataset) || exit
+
 		# Verify send
+		resume_token=$($ssh_cmd zfs get receive_resume_token -Hpo value $remote_dataset)
+		if [[ "$resume_token" != "-" ]]; then
+			echo "Error: Resume token is set! Try $ $0 resume"
+			exit 1
+		else
+			(set -x; zfs set tag:offsite=offsite $new_snap)
+		fi
 		;;
+
 	"resume")
 		# Check remote
+		init_remote
+
 		# Check remote resume tags
+		resume_token=$($ssh_cmd zfs get receive_resume_token -Hpo value $remote_dataset)
+		if [[ "$resume_token" == "-" ]]; then
+			echo "Error: Resume token isn't set, nothing to resume."
+			exit 1
+		fi
+
 		# Restart transfer
+        est_size=$(zfs send -Pn -t $resume_token | awk '/^incremental/ {print $4}')
+        (set -x; zfs send -t $resume_token | pv -s $est_size | $ssh_cmd zfs receive $remote_dataset) || exit
+
 		# Verify send
+		resume_token=$($ssh_cmd zfs get receive_resume_token -Hpo value $remote_dataset)
+		if [[ "$resume_token" != "-" ]]; then
+			echo "Error: Resume token is set! Try $ $0 resume"
+			exit 1
+		else
+			(set -x; zfs set tag:offsite=offsite $new_snap)
+		fi
 		;;
+
 	"restore")
 		# Check remote
 		# Check no local overwrite would occur
